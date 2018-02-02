@@ -422,6 +422,15 @@ function Start-BuildPackerTemplates {
     }
 }
 
+function Start-UnattendIso {
+
+    $startTime = Get-Date
+    LogWrite "Generating unattend ISO..."
+
+    Invoke-Expression "$global:Path\make_unattend_iso.ps1"
+    LogWrite "ISO generated."
+}
+
 function Start-GenerationProcess {
 
     LogWrite "vmgen process started."
@@ -628,8 +637,9 @@ If ($Download -eq $True) {
     Download-ISOs
 }
 
-if($Continue -eq $False ){    
+if($Continue -eq $False ){
     Start-BuildPackerTemplates
+    Start-UnattendIso    
     Update-Mac
 }
 
@@ -641,5 +651,5 @@ If ($GenerateJSON -eq $True -or $Build -eq $True) {
     Generate-SofwareListJson
     Prepare-SofwareListJsonToBeNotified
     Send-NotificationEmail
-    Remove-OutputFiles
+    # Remove-OutputFiles
 }

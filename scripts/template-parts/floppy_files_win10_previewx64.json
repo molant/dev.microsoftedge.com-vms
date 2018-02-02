@@ -2,11 +2,8 @@
   "builders": [
     {
       "type": "hyperv-iso",
-      "floppy_files": [
-        "answer_files/10_preview/autounattend.xml",
-        "floppy/common/preprovisioner.cmd",
-        "floppy/bginfo/win10/bgconfig.bgi",
-        "floppy/eula/win10/eula.txt"
+      "secondary_iso_images": [
+        "./iso/windows_10_insider_unattend.iso"
       ]
     },
     {

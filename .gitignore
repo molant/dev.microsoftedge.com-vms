@@ -1,7 +1,8 @@
 *.iso
 *.exe
-*.zip
+*.log
 *.md5.txt
+*.zip
 *.zip.00?
 !scripts/**/*.exe
 bin/
@@ -17,6 +18,8 @@ output-parallels-pvm/
 generated/
 vms/output/
 scripts/template-output/
+.vscode/
+logs/
 
 *.user
 tools/VMSGen/VMSGen/obj/

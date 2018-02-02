@@ -32,7 +32,7 @@ function ReplaceVariableContent ($file, $vmname) {
 }
 
 $template = "MSEdge-Win10_Preview"
-..\bin\PackerMerge\PackerMerge -i:".\template-parts\user.json,.\template-parts\urls_win10_previewx64.json,.\template-parts\win10_previewx64.json,.\template-parts\floppy_files_common.json,.\template-parts\floppy_files_win10_previewx64.json,.\template-parts\provisioner_common.json,.\template-parts\pp-vagrant.json" -o:.\template-output\$template.json
+..\bin\PackerMerge\PackerMerge -i:".\template-parts\user.json,.\template-parts\urls_win10_previewx64.json,.\template-parts\win10_previewx64.json,.\template-parts\floppy_files_win10_previewx64.json,.\template-parts\provisioner_common.json,.\template-parts\pp-vagrant.json" -o:.\template-output\$template.json
 Write-Verbose "$template.json created."
 
 $template = "MSEdge-Win10"
